@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello LLM Fine-Tuning | 大模型微调技术全栈指南</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="大模型微调技术全栈指南 - 从理论到实践，从基础到进阶">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- KaTeX 样式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+  <style>
+    :root {
+      --theme-color: #3eaf7c;
+      --dark-bg: #1a1a1a;
+      --dark-sidebar: #141414;
+      --dark-border: #333;
+      --dark-text: #e6e6e6;
+      --dark-code-text: #f8f8f2;
+      --dark-code-bg: #2b2b2b;
+    }
+
+    /* Mermaid 图表样式 */
+    .mermaid {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .mermaid svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* 暗黑模式基础样式 */
+    body.dark-mode {
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
+    }
+    body.dark-mode .sidebar {
+      background-color: var(--dark-sidebar);
+      border-right: 1px solid var(--dark-border);
+      color: var(--dark-text);
+    }
+    body.dark-mode .sidebar-nav li a {
+      color: #999;
+    }
+    body.dark-mode .sidebar-nav li.active > a {
+      color: var(--theme-color);
+      border-right: 2px solid var(--theme-color);
+    }
+    body.dark-mode pre {
+      background-color: var(--dark-code-bg) !important;
+    }
+    body.dark-mode code {
+      background-color: var(--dark-code-bg) !important;
+      color: var(--dark-code-text) !important;
+    }
+    body.dark-mode .markdown-section code {
+      color: #f08d49;
+      background-color: rgba(255,255,255,0.1);
+    }
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4 {
+      color: #ffffff;
+    }
+    body.dark-mode blockquote {
+      color: #b0b0b0;
+      background: rgba(255,255,255,0.05);
+      border-left-color: var(--theme-color);
+    }
+    body.dark-mode .markdown-section tr:nth-child(2n) {
+      background-color: rgba(255,255,255,0.03);
+    }
+    body.dark-mode .markdown-section td,
+    body.dark-mode .markdown-section th {
+      border-color: var(--dark-border);
+      background-color: transparent;
+    }
+    body.dark-mode .mermaid {
+      filter: invert(1) hue-rotate(180deg);
+    }
+
+    /* 暗黑模式切换按钮 */
+    .sidebar-toggle-btn {
+      cursor: pointer;
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      margin: 0 15px 10px 15px;
+      font-weight: bold;
+      font-size: 14px;
+      border-radius: 4px;
+      background-color: rgba(0,0,0,0.05);
+      color: #505d6b;
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: all 0.3s;
+    }
+    body.dark-mode .sidebar-toggle-btn {
+      background-color: rgba(255,255,255,0.1);
+      color: #ccc;
+      border: 1px solid #444;
+    }
+    .sidebar-toggle-btn:hover {
+      background-color: var(--theme-color);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">加载中...</div>
+  <script>
+    window.$docsify = {
+      name: 'Hello LLM Fine-Tuning',
+      repo: '',
+      logo: './logo.png',
+      loadSidebar: true,
+      auto2top: true,
+      subMaxLevel: 3,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '🔍 搜索',
+        noData: '😞 没有找到结果',
+        depth: 6
+      },
+      copyCode: {
+        buttonText: '复制',
+        errorText: '复制失败',
+        successText: '已复制'
+      },
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
+      },
+      plugins: [
+        // 暗黑模式切换插件
+        function(hook, vm) {
+          hook.doneEach(function() {
+            const sidebar = document.querySelector('.sidebar-nav');
+            if (!sidebar || document.querySelector('.sidebar-toggle-btn')) return;
+
+            const btn = document.createElement('div');
+            btn.className = 'sidebar-toggle-btn';
+
+            const savedTheme = localStorage.getItem('theme-mode');
+            if (savedTheme === 'dark') {
+              document.body.classList.add('dark-mode');
+              btn.textContent = '🌙 切换亮色';
+            } else {
+              btn.textContent = '☀️ 切换暗色';
+            }
+
+            btn.onclick = function() {
+              document.body.classList.toggle('dark-mode');
+              const isDark = document.body.classList.contains('dark-mode');
+              localStorage.setItem('theme-mode', isDark ? 'dark' : 'light');
+              btn.textContent = isDark ? '🌙 切换亮色' : '☀️ 切换暗色';
+            };
+
+            sidebar.insertBefore(btn, sidebar.firstChild);
+          });
+        },
+        // 图片相对路径修复插件
+        function(hook, vm) {
+          function getRouteDir() {
+            var hash = decodeURIComponent(window.location.hash || '');
+            if (!hash || hash === '#/' || hash === '#') return '';
+            var path = hash.replace(/^#\//, '').replace(/(\?.*|#.*)/g, '');
+            if (path && !path.endsWith('/')) {
+              path = path.replace(/[^\/]*$/, '');
+            }
+            return path;
+          }
+
+          hook.doneEach(function() {
+            try {
+              var routeDir = getRouteDir();
+              var base = window.location.origin + window.location.pathname + routeDir;
+              var selector = '.markdown-section img:not([data-origin])';
+              var imgs = document.querySelectorAll(selector);
+              imgs.forEach(function(img) {
+                var src = img.getAttribute('src');
+                if (!src) return;
+                if (/^(https?:)?\/\//i.test(src) || src.startsWith('/')) return;
+                try {
+                  var abs = new URL(src, base).pathname;
+                  img.setAttribute('src', abs);
+                } catch (e) {}
+              });
+            } catch (e) {}
+          });
+        }
+      ]
+    }
+  </script>
+  <!-- Docsify 核心 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 搜索插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 图片放大插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 代码复制插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!-- 分页导航插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@latest/dist/docsify-pagination.min.js"></script>
+  <!-- 字数统计插件 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- 代码高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <!-- KaTeX 数学公式 -->
+  <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <!-- Mermaid 图表 -->
+  <script src="//cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.min.js"></script>
+  <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true });</script>
+</body>
+</html>

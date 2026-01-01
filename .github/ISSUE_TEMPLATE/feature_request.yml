@@ -1,0 +1,57 @@
+name: 💡 功能建议
+description: 提出新功能或改进建议
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您的建议！我们非常重视社区的反馈。
+  
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题背景
+      description: 请描述您希望解决的问题或痛点
+      placeholder: 我在学习/使用时遇到了...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: solution
+    attributes:
+      label: 建议方案
+      description: 描述您期望的解决方案
+      placeholder: 我希望能够...
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: type
+    attributes:
+      label: 建议类型
+      description: 这个建议属于哪种类型？
+      options:
+        - 新增内容
+        - 内容改进
+        - 代码示例
+        - 文档结构
+        - 其他
+    validations:
+      required: true
+  
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 替代方案
+      description: 您是否考虑过其他替代方案？
+    validations:
+      required: false
+  
+  - type: textarea
+    id: additional
+    attributes:
+      label: 补充信息
+      description: 添加任何其他有助于理解建议的信息
+    validations:
+      required: false

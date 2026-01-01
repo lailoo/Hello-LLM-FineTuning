@@ -1,0 +1,76 @@
+name: 🐛 Bug 报告
+description: 报告文档或代码中的问题
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您提交 Bug 报告！请尽可能详细地描述问题。
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 请清晰地描述您遇到的问题
+      placeholder: 描述您遇到的问题...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 请提供复现问题的步骤
+      placeholder: |
+        1. 打开 '...'
+        2. 点击 '...'
+        3. 看到错误 '...'
+    validations:
+      required: true
+  
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+      description: 描述您期望发生的行为
+      placeholder: 我期望...
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: chapter
+    attributes:
+      label: 相关章节
+      description: 问题出现在哪个章节？
+      options:
+        - 第零章 导读
+        - 第一章 微调前置知识
+        - 第二章 理论基础
+        - 第三章 微调入门
+        - 第四章 PEFT参数高效微调
+        - 第五章 模型部署
+        - 其他
+    validations:
+      required: true
+  
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境信息
+      description: 请提供您的环境信息（如适用）
+      placeholder: |
+        - Python 版本: 3.10
+        - PyTorch 版本: 2.0
+        - 操作系统: Ubuntu 22.04
+        - GPU: RTX 4090
+    validations:
+      required: false
+  
+  - type: textarea
+    id: additional
+    attributes:
+      label: 补充信息
+      description: 添加任何其他有助于理解问题的信息
+    validations:
+      required: false

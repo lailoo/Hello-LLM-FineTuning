@@ -1,0 +1,22 @@
+- 目录
+    - 第零章 导读
+        - [AI大模型四阶通关指南](chapter0/00_AI大模型四阶通关指南.md)
+    - 第一章 微调前置知识
+        - [01 提示工程实战指南](chapter1/01_提示工程实战指南.md)
+        - [02 从零构建AI智能体](chapter1/02_从零构建AI智能体.md)
+    - 第二章 理论基础
+        - [01 语言模型演进全解析](chapter2/01_语言模型演进全解析.md)
+        - [02 大模型预训练技术](chapter2/02_大模型预训练技术.md)
+    - 第三章 微调入门
+        - [01 大模型微调实战指南](chapter3/01_大模型微调实战指南.md)
+        - [02 Hugging Face Transformers入门](chapter3/02_Hugging_Face_Transformers入门.md)
+    - 第四章 PEFT参数高效微调
+        - [01 PEFT实战指南](chapter4/01_PEFT实战指南.md)
+        - [02 PEFT主流技术全解析](chapter4/02_PEFT主流技术全解析.md)
+        - [03 Soft Prompt实战指南](chapter4/03_Soft_Prompt实战指南.md)
+        - [04 P-Tuning演进全解析](chapter4/04_P-Tuning演进全解析.md)
+        - [05 Adapter微调革命](chapter4/05_Adapter微调革命.md)
+        - [06 LoRA低秩适配微调](chapter4/06_LoRA低秩适配微调.md)
+    - 第五章 模型部署
+        - [01 vLLM推理引擎深度拆解](chapter5/01_vLLM推理引擎深度拆解.md)
+        - [02 Triton部署实战指南](chapter5/02_Triton部署实战指南.md)

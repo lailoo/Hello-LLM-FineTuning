@@ -1,0 +1,73 @@
+name: 📚 学习反馈
+description: 分享您的学习体验和建议
+title: "[Feedback]: "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您分享学习反馈！您的意见对我们改进教程非常重要。
+  
+  - type: dropdown
+    id: chapter
+    attributes:
+      label: 学习章节
+      description: 您反馈的是哪个章节？
+      options:
+        - 第零章 导读
+        - 第一章 微调前置知识
+        - 第二章 理论基础
+        - 第三章 微调入门
+        - 第四章 PEFT参数高效微调
+        - 第五章 模型部署
+        - 整体反馈
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: 难度评价
+      description: 您觉得内容难度如何？
+      options:
+        - 太简单
+        - 适中
+        - 有点难
+        - 太难了
+    validations:
+      required: true
+  
+  - type: textarea
+    id: feedback
+    attributes:
+      label: 详细反馈
+      description: 请分享您的学习体验
+      placeholder: |
+        - 哪些内容对您帮助最大？
+        - 哪些地方需要改进？
+        - 有什么建议？
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: background
+    attributes:
+      label: 您的背景
+      description: 您的技术背景是？
+      options:
+        - 学生
+        - AI/ML 工程师
+        - 后端开发者
+        - 全栈开发者
+        - 研究人员
+        - 其他
+    validations:
+      required: false
+  
+  - type: textarea
+    id: additional
+    attributes:
+      label: 其他建议
+      description: 还有什么想说的？
+    validations:
+      required: false
