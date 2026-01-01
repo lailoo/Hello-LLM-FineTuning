@@ -57,6 +57,8 @@
 - [04 P-Tuning演进全解析](docs/chapter4/04_P-Tuning演进全解析.md) - 从V1到V2的核心技术
 - [05 Adapter微调革命](docs/chapter4/05_Adapter微调革命.md) - 用3.6%参数撬动大模型100%性能
 - [06 LoRA低秩适配微调](docs/chapter4/06_LoRA低秩适配微调.md) - 百万参数撬动十亿大模型
+- [07 大模型量化实战指南](docs/chapter4/07_大模型量化实战指南.md) - 从16GB到4GB显存的高效压缩
+- [08 UniPELT实战指南](docs/chapter4/08_UniPELT实战指南.md) - 统一高效微调大模型的终极框架
 
 ### 第五章 模型部署
 - [01 vLLM推理引擎深度拆解](docs/chapter5/01_vLLM推理引擎深度拆解.md) - 核心加速机制与组件原理
