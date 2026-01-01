@@ -20,6 +20,7 @@
         - [07 UniPELT实战指南](chapter4/07_UniPELT实战指南.md)
     - 第五章 模型量化
         - [01 大模型量化实战指南](chapter5/01_大模型量化实战指南.md)
+        - [02 GPTQ实战指南](chapter5/02_GPTQ实战指南.md)
     - 第六章 模型部署
         - [01 vLLM推理引擎深度拆解](chapter6/01_vLLM推理引擎深度拆解.md)
         - [02 Triton部署实战指南](chapter6/02_Triton部署实战指南.md)
