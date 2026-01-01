@@ -3,11 +3,16 @@
   <h1>Hello LLM Fine-Tuning</h1>
   <h3>🔧 大模型微调技术全栈指南</h3>
   <p><em>从理论到实践，从基础到进阶，构建你的微调技术体系</em></p>
+  
+  <p>
+    <a href="https://github.com/lailoo/Hello-LLM-FineTuning"><img src="https://img.shields.io/github/stars/lailoo/Hello-LLM-FineTuning?style=social" alt="GitHub stars"></a>
+    <a href="https://github.com/lailoo/Hello-LLM-FineTuning/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" alt="License"></a>
+  </p>
 </div>
 
 ---
 
-## 项目简介
+## 📖 项目简介
 
 本项目是一个面向大模型应用开发者的微调（Fine-tuning）技术全栈教程，旨在通过体系化的学习路径和动手实践项目，帮助开发者掌握基于大语言模型的微调技术，构建定制化的智能应用。
 
@@ -19,14 +24,14 @@
 4. **PEFT参数高效微调**：LoRA、Adapter、P-Tuning等主流方法
 5. **模型部署**：vLLM、Triton等推理部署方案
 
-## 项目亮点
+## ✨ 项目亮点
 
-1. **体系化学习路径** - 从基础概念到高级应用，构建完整的微调技术学习体系
-2. **理论与实践并重** - 每个章节都包含理论讲解和代码实践
-3. **多种微调方法覆盖** - LoRA、QLoRA、Adapter、P-Tuning等主流方法
-4. **工程化导向** - 注重模型部署等工程实践
+- 🎯 **体系化学习路径** - 从基础概念到高级应用，构建完整的微调技术学习体系
+- 📚 **理论与实践并重** - 每个章节都包含理论讲解和代码实践
+- 🔧 **多种微调方法覆盖** - LoRA、QLoRA、Adapter、P-Tuning等主流方法
+- 🚀 **工程化导向** - 注重模型部署等工程实践
 
-## 内容大纲
+## 📚 内容大纲
 
 ### 第零章 导读
 - [AI大模型四阶通关指南](chapter0/00_AI大模型四阶通关指南.md) - 从提示词到预训练的技术路线图
@@ -55,18 +60,62 @@
 - [01 vLLM推理引擎深度拆解](chapter5/01_vLLM推理引擎深度拆解.md) - 核心加速机制与组件原理
 - [02 Triton部署实战指南](chapter5/02_Triton部署实战指南.md) - 从设计思想到生产落地
 
-## 目标受众
+## 🎯 目标受众
 
 - 具备 Python 编程基础，对大模型微调感兴趣的开发者
 - 希望系统学习微调技术的 AI 工程师
 - 想要定制化大模型能力的产品开发者
 
-## 前置要求
+## 📋 前置要求
 
 - 掌握 Python 基础语法和 PyTorch 基本使用
 - 了解 Transformer 架构基础概念
 - 具备基础的 Linux 命令行操作能力
 
-## 许可证
+## 🚀 快速开始
+
+### 本地预览文档
+
+```bash
+# 安装 docsify-cli
+npm install -g docsify-cli
+
+# 启动本地服务
+docsify serve docs
+
+# 访问 http://localhost:3000
+```
+
+## 📁 项目结构
+
+```
+Hello-LLM-FineTuning/
+├── docs/                    # 教程文档
+│   ├── index.html          # docsify 配置
+│   ├── _sidebar.md         # 侧边栏导航
+│   ├── README.md           # 文档首页
+│   ├── chapter0/           # 第零章：导读
+│   ├── chapter1/           # 第一章：微调前置知识
+│   ├── chapter2/           # 第二章：理论基础
+│   ├── chapter3/           # 第三章：微调入门
+│   ├── chapter4/           # 第四章：PEFT参数高效微调
+│   ├── chapter5/           # 第五章：模型部署
+│   └── images/             # 图片资源
+├── .github/                 # GitHub 配置
+│   └── ISSUE_TEMPLATE/     # Issue 模板
+├── logo.png                # 项目 Logo
+├── LICENSE                 # 许可证
+└── README.md               # 项目说明
+```
+
+## 🤝 参与贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+- 🐛 [报告 Bug](https://github.com/lailoo/Hello-LLM-FineTuning/issues/new?template=bug_report.yml)
+- 💡 [功能建议](https://github.com/lailoo/Hello-LLM-FineTuning/issues/new?template=feature_request.yml)
+- 📚 [学习反馈](https://github.com/lailoo/Hello-LLM-FineTuning/issues/new?template=study_feedback.yml)
+
+## 📄 许可证
 
 本作品采用 [知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/) 进行许可。
