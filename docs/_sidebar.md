@@ -17,8 +17,9 @@
         - [04 P-Tuning演进全解析](chapter4/04_P-Tuning演进全解析.md)
         - [05 Adapter微调革命](chapter4/05_Adapter微调革命.md)
         - [06 LoRA低秩适配微调](chapter4/06_LoRA低秩适配微调.md)
-        - [07 大模型量化实战指南](chapter4/07_大模型量化实战指南.md)
-        - [08 UniPELT实战指南](chapter4/08_UniPELT实战指南.md)
+        - [07 UniPELT实战指南](chapter4/07_UniPELT实战指南.md)
     - 第五章 模型部署
         - [01 vLLM推理引擎深度拆解](chapter5/01_vLLM推理引擎深度拆解.md)
         - [02 Triton部署实战指南](chapter5/02_Triton部署实战指南.md)
+    - 第六章 模型量化
+        - [01 大模型量化实战指南](chapter6/01_大模型量化实战指南.md)
