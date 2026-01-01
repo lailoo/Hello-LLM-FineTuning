@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./logo.png" alt="Hello LLM Fine-Tuning Logo" width="200">
+  <img src="./docs/logo.png" alt="Hello LLM Fine-Tuning Logo" width="200">
   <h1>Hello LLM Fine-Tuning</h1>
   <h3>🔧 大模型微调技术全栈指南</h3>
   <p><em>从理论到实践，从基础到进阶，构建你的微调技术体系</em></p>
@@ -18,6 +18,14 @@
 
 **在线阅读**: [Hello LLM Fine-Tuning 文档](https://lailoo.github.io/Hello-LLM-FineTuning/)
 
+**主要内容包括：**
+
+1. **微调前置知识**：提示工程、AI智能体等基础概念
+2. **理论基础**：语言模型演进、预训练技术原理
+3. **微调入门**：从理论到实践的完整微调流程
+4. **PEFT参数高效微调**：LoRA、Adapter、P-Tuning等主流方法
+5. **模型部署**：vLLM、Triton等推理部署方案
+
 ## ✨ 项目亮点
 
 - 🎯 **体系化学习路径** - 从基础概念到高级应用，构建完整的微调技术学习体系
@@ -27,14 +35,32 @@
 
 ## 📚 内容大纲
 
-| 章节 | 内容 |
-|------|------|
-| **第零章** | [AI大模型四阶通关指南](./docs/chapter0/00_AI大模型四阶通关指南.md) |
-| **第一章** | 微调前置知识：提示工程、AI智能体 |
-| **第二章** | 理论基础：语言模型演进、预训练技术 |
-| **第三章** | 微调入门：实战指南、Transformers入门 |
-| **第四章** | PEFT参数高效微调：LoRA、Adapter、P-Tuning 等 |
-| **第五章** | 模型部署：vLLM、Triton |
+### 第零章 导读
+- [AI大模型四阶通关指南](docs/chapter0/00_AI大模型四阶通关指南.md) - 从提示词到预训练的技术路线图
+
+### 第一章 微调前置知识
+- [01 提示工程实战指南](docs/chapter1/01_提示工程实战指南.md) - 零训练成本解锁大模型潜力
+- [02 从零构建AI智能体](docs/chapter1/02_从零构建AI智能体.md) - ReAct范式与LangChain实战
+
+### 第二章 理论基础
+- [01 语言模型演进全解析](docs/chapter2/01_语言模型演进全解析.md) - 从统计到GPT/BERT的核心突破
+- [02 大模型预训练技术](docs/chapter2/02_大模型预训练技术.md) - 从通识教育到千亿参数炼成
+
+### 第三章 微调入门
+- [01 大模型微调实战指南](docs/chapter3/01_大模型微调实战指南.md) - 从理论到高效落地的核心路径
+- [02 Hugging Face Transformers入门](docs/chapter3/02_Hugging_Face_Transformers入门.md) - 大模型微调入门实战
+
+### 第四章 PEFT参数高效微调
+- [01 PEFT实战指南](docs/chapter4/01_PEFT实战指南.md) - 用1%参数高效微调大模型
+- [02 PEFT主流技术全解析](docs/chapter4/02_PEFT主流技术全解析.md) - 四大核心类别与实战选型
+- [03 Soft Prompt实战指南](docs/chapter4/03_Soft_Prompt实战指南.md) - Prefix Tuning vs Prompt Tuning
+- [04 P-Tuning演进全解析](docs/chapter4/04_P-Tuning演进全解析.md) - 从V1到V2的核心技术
+- [05 Adapter微调革命](docs/chapter4/05_Adapter微调革命.md) - 用3.6%参数撬动大模型100%性能
+- [06 LoRA低秩适配微调](docs/chapter4/06_LoRA低秩适配微调.md) - 百万参数撬动十亿大模型
+
+### 第五章 模型部署
+- [01 vLLM推理引擎深度拆解](docs/chapter5/01_vLLM推理引擎深度拆解.md) - 核心加速机制与组件原理
+- [02 Triton部署实战指南](docs/chapter5/02_Triton部署实战指南.md) - 从设计思想到生产落地
 
 ## 🎯 目标受众
 
@@ -69,7 +95,7 @@ Hello-LLM-FineTuning/
 ├── docs/                    # 教程文档
 │   ├── index.html          # docsify 配置
 │   ├── _sidebar.md         # 侧边栏导航
-│   ├── README.md           # 文档首页
+│   ├── logo.png            # 项目 Logo
 │   ├── chapter0/           # 第零章：导读
 │   ├── chapter1/           # 第一章：微调前置知识
 │   ├── chapter2/           # 第二章：理论基础
@@ -79,9 +105,8 @@ Hello-LLM-FineTuning/
 │   └── images/             # 图片资源
 ├── .github/                 # GitHub 配置
 │   └── ISSUE_TEMPLATE/     # Issue 模板
-├── logo.png                # 项目 Logo
-├── LICENSE                 # MIT 许可证
-└── README.md               # 项目说明（本文件）
+├── LICENSE                 # CC BY-NC-SA 4.0 许可证
+└── README.md               # 项目首页（本文件）
 ```
 
 ## 🤝 参与贡献
