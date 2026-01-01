@@ -59,12 +59,12 @@
 - [06 LoRA低秩适配微调](docs/chapter4/06_LoRA低秩适配微调.md) - 百万参数撬动十亿大模型
 - [07 UniPELT实战指南](docs/chapter4/07_UniPELT实战指南.md) - 统一高效微调大模型的终极框架
 
-### 第五章 模型部署
-- [01 vLLM推理引擎深度拆解](docs/chapter5/01_vLLM推理引擎深度拆解.md) - 核心加速机制与组件原理
-- [02 Triton部署实战指南](docs/chapter5/02_Triton部署实战指南.md) - 从设计思想到生产落地
+### 第五章 模型量化
+- [01 大模型量化实战指南](docs/chapter5/01_大模型量化实战指南.md) - 从16GB到4GB显存的高效压缩
 
-### 第六章 模型量化
-- [01 大模型量化实战指南](docs/chapter6/01_大模型量化实战指南.md) - 从16GB到4GB显存的高效压缩
+### 第六章 模型部署
+- [01 vLLM推理引擎深度拆解](docs/chapter6/01_vLLM推理引擎深度拆解.md) - 核心加速机制与组件原理
+- [02 Triton部署实战指南](docs/chapter6/02_Triton部署实战指南.md) - 从设计思想到生产落地
 
 ## 🎯 目标受众
 
