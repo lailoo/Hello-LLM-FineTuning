@@ -6,7 +6,7 @@
   
   <p>
     <a href="https://github.com/lailoo/Hello-LLM-FineTuning"><img src="https://img.shields.io/github/stars/lailoo/Hello-LLM-FineTuning?style=social" alt="GitHub stars"></a>
-    <a href="https://github.com/lailoo/Hello-LLM-FineTuning/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+    <a href="https://github.com/lailoo/Hello-LLM-FineTuning/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" alt="License"></a>
   </p>
 </div>
 
@@ -94,4 +94,4 @@ Hello-LLM-FineTuning/
 
 ## 📄 许可证
 
-本项目采用 [MIT 许可证](LICENSE)
+本项目采用 [CC BY-NC-SA 4.0 许可证](LICENSE)（知识共享署名-非商业性使用-相同方式共享 4.0 国际）
